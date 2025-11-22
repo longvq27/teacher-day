@@ -1,2 +1,3 @@
 - npm install
 - npm run dev
+- I only built the web interface and it’s not responsive yet, so don’t ask why it looks bad on mobile. Hẹ Hẹ
