@@ -17035,3 +17035,126 @@ html:not(.small-nav) {
 .textured-type{
 	line-height: 1em !important;
 }
+
+.shard-wrap-2 {
+    display: none;
+}
+
+.shard-wrap-2.active {
+    display: block;
+	width: 500px	;
+	.shard {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+}
+
+.animalinfo-wrapper{
+	top: 0;
+}
+.animal-image{
+  width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#animal-image {
+	min-width: 40%;
+	width: 40%;
+	min-height: 50vh;
+	max-height: 50vh;
+}
+
+#animal-image.fade {
+  opacity: 0;
+}
+.thank-teacher {
+  display: none;
+}
+
+/* Khi active */
+.overlay.thank-teacher {
+  display: block;
+  position: absolute;
+  height: 80vh;
+  top: 40px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  padding: 28px 34px;
+  width: 100%;
+  max-width: 90%;
+  text-align: center;
+  color: #fff;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 1);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+
+  /* Glow effect */
+  box-shadow:
+    0 0 20px rgba(255, 220, 145, 0.45),
+    0 12px 30px rgba(0, 0, 0, 0.25),
+    inset 0 0 15px rgba(255, 255, 255, 0.18);
+
+  /* Animation */
+  opacity: 0;
+  animation: thankPopupFade 0.7s ease forwards;
+  z-index: 9999;
+}
+
+@keyframes thankPopupFade {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(40px) scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+/* Title */
+.overlay.thank-teacher h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #ffd98b;
+  text-shadow: 0 0 10px rgba(255, 214, 120, 0.7);
+}
+
+/* Text */
+.overlay.thank-teacher p {
+  font-size: 17px;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  opacity: 0.95;
+}
+
+/* Image */
+
+/* Hover nhẹ */
+.overlay.thank-teacher img:hover {
+  transform: scale(1.03);
+}
+
+/* Responsive */
+@media(max-width: 480px) {
+  .overlay.thank-teacher {
+    bottom: 20px;
+    padding: 20px;
+  }
+  .overlay.thank-teacher h2 {
+    font-size: 20px;
+  }
+  .overlay.thank-teacher p {
+    font-size: 15px;
+  }
+}
+

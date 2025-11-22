@@ -67,6 +67,41 @@ const animalNames = [
   'Khoảnh Khắc Ra Trường',
 ]
 
+const animalImages = [
+  "https://thinhdaiphat.com/wp-content/uploads/2017/04/phan-viet-bang-mic-trang-10-vien.jpg", // Viên Phấn Trắng
+  "https://banghlt.com/wp-content/uploads/2024/07/viet-bang-dep-4.jpg", // Bảng Đen
+  "https://vis.edu.vn/wp-content/uploads/2023/11/401206896_851148507015542_7566683992458363201_n.jpg", // Áo Dài 20/11
+  "https://truongtotnhat.vn/wp-content/uploads/2025/07/mau-bia-so-diem-ca-nhan-cho-giao-vien.jpg", // Sổ Điểm
+  "https://kenh14cdn.com/2017/red-371550-1512639635831.jpg", // Nét Chữ Đỏ
+  "https://doitam.vn/bk-theme/uploads/2025/06/y-nghia-tieng-trong-truong-trong-sinh-hoat-hang-ngay.jpg", // Tiếng Trống Trường
+  "https://www.netabooks.vn/Data/Sites/1/Product/31669/thumbs/combo-nguoi-thay-dau-tien-bai-giang-cuoi-cung-.jpg", // Bài Giảng Đầu Tiên
+  "https://cafebiz.cafebizcdn.vn/162123310254002176/2023/3/26/zalo-screenshot-23-3-2023-1523644-2391-1679817577445-16798175776442132892262.png", // Cặp Sách Nặng Trĩu
+  "https://st.download.vn/data/image/2021/09/10/Gio-ra-choi-700.jpg", // Giờ Ra Chơi
+  "https://truongtotnhat.vn/wp-content/uploads/2025/07/hoc-sinh-tap-trung-chuan-bi-cho-le-chao-co.jpg", // Buổi Chào Cờ
+  "https://nld.mediacdn.vn/291774122806476800/2024/1/6/12-thumbnailnldmang-con-1704546295745820819987.jpg", // Những Lời La Mắng
+  "https://cdn-i.doisongphapluat.com.vn/media/dang-thi-thuy-tien/2021/10/14/bai-kiem-tra-tu-10-diem-bi-giao-vien-tru-con-0-diem-nguyen-nhan-do-mac-phai-dieu-cam-ky-dspl-1.gif", // Bài Kiểm Tra 15 Phút
+  "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2022/11/18/1118037/A2.jpg", // Soạn Bài Khuya
+  "https://cdn.thuvienphapluat.vn/uploads/lawnews/2024/08/31/70430/hop-phu-huynh.jpg?w=480&h=280", // Họp Phụ Huynh
+  "https://kenh14cdn.com/2018/3/26/nguyen-ha-trang-1522034359028309600309.jpg", // Giẻ Lau Bảng
+  "https://images2.thanhnien.vn/528068263637045248/2023/5/5/quynh-anh-16832734865101627465479.jpg", // Tập Làm Văn
+  "https://cdn-i.vtcnews.vn/resize/th/upload/2020/07/08/hieu-14-15312091.jpg", // Lần Đầu Được Khen
+  "https://lh3.googleusercontent.com/proxy/WFdgQZnWOa6_mNZF1CUl3ArpXqOgq-M4pmiLsaHHrthyFSMP2YzvTRzJU3FzPydh2tXEtypM3o-AxRGeDdlU2RlL2J_oumzdrL49oUzi7fjGXNiQj7TLdkV5ZR3g3dHlGmm11rehOQqsBpv_9vhLjByjdCJiBV9Gw8c", // Sân Trường Mùa Phượng
+  "https://st.download.vn/data/image/2023/04/11/ta-co-giao-ngan-gon.jpg", // Bài Văn Mẫu Của Cô
+  "https://vnn-imgs-a1.vgcloud.vn/afamilycdn.com/150157425591193600/2020/5/16/5a751cbd7c6f5-15896482975451498188495-13-0-419-650-crop-1589648306117303533546.jpg?width=0&s=IBCfsCSG_KIfSfUT8mN0sA", // Bài Toán Khó
+  "https://simg.zalopay.com.vn/zlp-website/assets/thumb_truyen_co_tich_Viet_Nam_e8b927bfc3.jpg", // Những Câu Chuyện Ngoài Sách
+  "https://cdn2.tuoitre.vn/471584752817336320/2024/5/18/mua-to-thu-duc-17157734421451069854114-1715992962095703759468.jpg", // Ngày Mưa Đi Học
+  "https://mamnonhoami.edu.vn/wp-content/uploads/2021/06/ngay-dau-tien-di-hoc-vien-phuong.jpg", // Ngày Đầu Tiên Đi Học
+  "https://lh4.googleusercontent.com/proxy/D-upSeirENXWcXa5J7zqHEw2eJ8j8ZxwZnkhYxPUZD0tWWqT01joQnaTyQsIGDAU2Ap8LP9zBO4pKvAe_dPJ-VGxue33c3J9ltf4Xwpx4e9r-MIHiRblhZqlBMKRTqnx6I315cAgx33HkytYQdpp4D0QKuhJp1VuRItQpr3MjQ", // Tiết Sinh Hoạt Cuối Tuần
+  "https://tuyetkypowerpoint.com/wp-content/uploads/2025/05/backdrop-le-tong-ket-nam-hoc-a25051103.jpg", // Buổi Tổng Kết
+  "https://down-vn.img.susercontent.com/file/98a50e6a6c1c579e079398097a195017", // Bảng Thành Tích
+  "https://bcp.cdnchinhphu.vn/334894974524682240/2025/11/19/z72390391703868390cc05267fb31542ad2d82de70c16c-17635613525502133862026.jpg", // Nụ Cười Của Thầy Cô
+  "https://cdn.thuvienphapluat.vn/uploads/phapluat/2022-2/NTTX/051124/thiep-20-11-mau-1.jpg", // Tấm Thiệp 20/11
+  "https://thuthuat.taimienphi.vn/cf/Images/huy/2022/4/27/ta-thay-co-giao-tung-day-va-de-lai-cho-em-nhieu-tinh-cam-tot-dep-0.jpg", // Những Lần Thầy Cô Đỡ Ta Dậy
+  "https://i.ytimg.com/vi/Y4F1mdvHwg0/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDoIkI8H93KHbmUl--5kA5pHUozEQ", // Khoảnh Khắc Ra Trường
+];
+
+
+
 
 // SCIENTIFIC NAMES
 const animalScientificName = [

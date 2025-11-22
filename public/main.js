@@ -758,6 +758,24 @@ function nextorprevanimal(e) {
   $('.prev .popout').attr('popanimal', animalList[newAnimal])
   $('.popout').addClass('text-change')
   $('.animalinfo').addClass('text-change')
+  console.log(newAnimal)
+  if (newAnimal === 29 && !window.teacherPopupShown) {
+    window.teacherPopupShown = true;
+    $('.thank-teacher').addClass('overlay');
+  }
+  else{
+       window.teacherPopupShown = false;
+    $('.thank-teacher').removeClass('overlay');
+  }
+
+  $('#animal-image')
+    .addClass('fade')
+    .attr('src', animalImages[newAnimal])
+    .on('load', function () {
+        $(this).removeClass('fade');
+    });
+
+
 
   $('.content-wrap .content-info .infos ul li:nth-child(1) span').html(animalScientificName[newAnimal])
   $('.content-wrap .content-info .infos ul li:nth-child(3) span').html(animalRange[newAnimal])
@@ -784,6 +802,7 @@ function nextorprevanimal(e) {
       $('.next .popout').text(animalNames[newAnimal + 1])
     }
   }, 150)
+
 }
 
 function animationstatequestion(e) {
@@ -1010,7 +1029,20 @@ function animalStatesShimmer(e) {
   }, 7000)
 }
 
-function nowebkitnextorprevanimal(e) {
-  $('.wrap .shard-wrap.active').removeClass('active')
-  $('.wrap .shard-wrap:nth-child(' + (newAnimal + 1) + ')').addClass('active')
+function nowebkitnextorprevanimal() {
+  $('.wrap .shard-wrap-2').removeClass('active');
+  $('.wrap .shard-wrap-2').eq(newAnimal).addClass('active');
 }
+
+$(document).on('click', '.thank-teacher .close-btn', function () {
+  const popup = $('.thank-teacher');
+
+  // Add fade out animation
+  popup.addClass('fadeOut');
+
+  // After animation -> remove overlay
+  setTimeout(() => {
+    popup.removeClass('overlay fadeOut');
+  }, 450);
+});
+
