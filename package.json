@@ -1,0 +1,14 @@
+{
+  "name": "species-in-pieces",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.83.4",
+    "vite": "^6.0.5"
+  }
+}
