@@ -162,10 +162,34 @@ $(document).ready(function () {
     nextAnimalProcess()
   })
 
-  $('.why-endangered').on('click', function (e) {
-    window.teacherPopupShown = true;
-    $('.meaning-of-memory').addClass('overlay');
-  })
+$('.why-endangered').on('click', function (e) {
+  window.teacherPopupShown = true;
+  const name = animalNames[newAnimal];
+  $('.meaning-of-memory').addClass('overlay');
+  $('.meaning-of-memory h2').text(name);
+  $('.meaning-of-memory p').remove();
+  $(memoryMeanings[name]).insertBefore('.meaning-of-memory img');
+});
+
+  function showMemoryContent(name) {
+  $('.meaning-of-memory h2').text(name);
+  $('.meaning-of-memory p').remove();
+  $(memoryMeanings[name]).insertBefore('.meaning-of-memory img');
+}
+
+  function updatePopup(data) {
+  $('.meaning-of-memory h2').text(data.title);
+
+  // Clear old <p>, add new ones
+  const pContainer = $('.meaning-of-memory');
+  pContainer.find('p').remove(); // xóa hết p cũ
+
+  data.paragraphs.forEach(text => {
+    $('<p>').text(text).insertBefore('.meaning-of-memory img');
+  });
+
+  $('.meaning-of-memory img').attr('src', data.img);
+}
   $('.close-btn').on('click', function (e) {
     window.teacherPopupShown = true;
     $('.meaning-of-memory').removeClass('overlay');

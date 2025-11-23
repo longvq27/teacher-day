@@ -67,8 +67,162 @@ const animalNames = [
   'Khoảnh Khắc Ra Trường',
 ]
 
+const memoryMeanings = {
+  "Viên Phấn Trắng": `
+    <p>Những viên phấn trắng nhỏ bé nhưng đã viết nên cả bầu trời tri thức. 
+    Chúng mòn đi theo từng bài giảng, giống như sự tận tụy thầm lặng của thầy cô.</p>
+    <p>Mỗi đường phấn là một bài học, một sự kiên nhẫn và một tình yêu không lời.</p>
+  `,
+
+  "Bảng Đen": `
+    <p>Chiếc bảng đen lưu giữ vô số nét chữ, công thức và lời nhắc nhở dịu dàng.</p>
+    <p>Nơi đó là cả tuổi thơ — của sự chăm chú, hồi hộp và những khoảnh khắc “à, mình hiểu rồi!”.</p>
+  `,
+
+  "Áo Dài 20/11": `
+    <p>Tà áo dài của thầy cô ngày 20/11 luôn là hình ảnh đẹp nhất — trang trọng, tinh khôi và đáng nhớ.</p>
+    <p>Nó gợi lại khoảnh khắc tri ân đầy xúc động của mái trường xưa.</p>
+  `,
+
+  "Sổ Điểm": `
+    <p>Sổ điểm không chỉ ghi chép con số, mà còn là sự kỳ vọng, sự động viên và đôi lúc là lời nhắc nhở nhẹ nhàng.</p>
+    <p>Đó là bản nhật ký ghi lại hành trình trưởng thành của mỗi học trò.</p>
+  `,
+
+  "Nét Chữ Đỏ": `
+    <p>Những dòng chữ đỏ chỉnh sửa cẩn thận trên trang vở luôn khiến ta nhớ mãi.</p>
+    <p>Đó là sự quan tâm thầy cô dành cho từng lỗi nhỏ, để ta hoàn thiện hơn mỗi ngày.</p>
+  `,
+
+  "Tiếng Trống Trường": `
+    <p>Tiếng trống trường vang lên là nhịp đập của thời học sinh — báo hiệu bắt đầu, kết thúc và cả những hồi hộp xen lẫn vui sướng.</p>
+    <p>Mỗi tiếng trống là một trang ký ức không thể phai.</p>
+  `,
+
+  "Bài Giảng Đầu Tiên": `
+    <p>Bài giảng đầu tiên luôn là dấu mốc đáng nhớ — vừa lạ lẫm vừa đầy háo hức.</p>
+    <p>Đó cũng là lúc ta học được bài học đầu đời về sự dẫn dắt của thầy cô.</p>
+  `,
+
+  "Cặp Sách Nặng Trĩu": `
+    <p>Cặp sách nặng không chỉ vì sách vở, mà vì trong đó có cả mơ ước, áp lực và niềm hy vọng của tuổi học sinh.</p>
+    <p>Nó đồng hành với ta trong suốt chặng đường lớn lên.</p>
+  `,
+
+  "Giờ Ra Chơi": `
+    <p>Giờ ra chơi là khoảnh khắc tự do nhất — những tiếng cười giòn tan, những trò chơi ngây ngô.</p>
+    <p>Nơi mọi lo âu tan biến, chỉ còn niềm vui thuần khiết tuổi học trò.</p>
+  `,
+
+  "Buổi Chào Cờ": `
+    <p>Buổi chào cờ sáng thứ hai là nghi thức trang nghiêm gắn với bao kỷ niệm.</p>
+    <p>Lá cờ tung bay nhắc ta về niềm tự hào, kỷ luật và tinh thần đoàn kết.</p>
+  `,
+
+  "Những Lời La Mắng": `
+    <p>Những lời la mắng của thầy cô từng khiến ta buồn, nhưng sau này ta mới hiểu đó là sự quan tâm sâu sắc.</p>
+    <p>Sự nghiêm khắc ấy đã giúp ta trưởng thành hơn.</p>
+  `,
+
+  "Bài Kiểm Tra 15 Phút": `
+    <p>Những bài kiểm tra 15 phút luôn là nỗi bất ngờ đầy cảm giác hồi hộp.</p>
+    <p>Chúng giúp ta rèn sự tập trung và đối diện với thử thách nhỏ mỗi ngày.</p>
+  `,
+
+  "Soạn Bài Khuya": `
+    <p>Có những đêm thầy cô thức khuya soạn từng trang giáo án.</p>
+    <p>Sự chuẩn bị lặng lẽ ấy là nền tảng cho mỗi tiết học chất lượng của chúng ta.</p>
+  `,
+
+  "Họp Phụ Huynh": `
+    <p>Buổi họp phụ huynh luôn khiến học trò lo lắng, nhưng đó cũng là lúc thầy cô gửi gắm sự thẳng thắn và kỳ vọng.</p>
+    <p>Một buổi gặp gỡ để thấu hiểu và cùng nhau giúp ta tiến bộ.</p>
+  `,
+
+  "Giẻ Lau Bảng": `
+    <p>Giẻ lau bảng luôn gắn liền với mùi bụi phấn và những lần tranh nhau lau bảng đầy vui vẻ.</p>
+    <p>Nó là một mảnh ký ức nhỏ nhưng thân thương khó tả.</p>
+  `,
+
+  "Tập Làm Văn": `
+    <p>Tập làm văn dạy ta cách diễn đạt suy nghĩ, cách cảm nhận đời sống.</p>
+    <p>Những bài văn đầu đời tuy vụng về nhưng chứa đựng cảm xúc chân thật nhất.</p>
+  `,
+
+  "Lần Đầu Được Khen": `
+    <p>Lần đầu được thầy cô khen là khoảnh khắc sáng bừng, tiếp thêm động lực lớn lao.</p>
+    <p>Một lời khen nhỏ cũng đủ thay đổi cả ngày của một đứa trẻ.</p>
+  `,
+
+  "Sân Trường Mùa Phượng": `
+    <p>Sân trường đỏ rực mùa phượng nở luôn là cảnh đẹp khó quên.</p>
+    <p>Phượng nở báo hiệu kết thúc một năm học, và mở ra những cảm xúc khó diễn tả.</p>
+  `,
+
+  "Bài Văn Mẫu Của Cô": `
+    <p>Bài văn mẫu của cô không chỉ hay mà còn giúp ta hiểu cách cảm nhận cái đẹp.</p>
+    <p>Đó là nguồn cảm hứng để ta viết nên những dòng văn của chính mình.</p>
+  `,
+
+  "Bài Toán Khó": `
+    <p>Bài toán khó từng khiến ta đau đầu nhưng cũng dạy ta kiên nhẫn và tư duy.</p>
+    <p>Cảm giác giải được một bài toán thật sự là niềm vui chiến thắng.</p>
+  `,
+
+  "Những Câu Chuyện Ngoài Sách": `
+    <p>Những câu chuyện thầy cô kể ngoài bài giảng là điều ta nhớ lâu nhất.</p>
+    <p>Chúng dạy ta về cuộc đời, nhân cách và những bài học mà sách vở không viết.</p>
+  `,
+
+  "Ngày Mưa Đi Học": `
+    <p>Những ngày mưa đi học là ký ức vừa lạnh vừa ấm — lạnh vì thời tiết, ấm vì tình bạn và sự quan tâm của thầy cô.</p>
+    <p>Dù ướt áo, lòng vẫn vui.</p>
+  `,
+
+  "Ngày Đầu Tiên Đi Học": `
+    <p>Ngày đầu tiên đi học là ngày không thể quên — bỡ ngỡ, lo lắng nhưng tràn đầy hy vọng.</p>
+    <p>Đó là cánh cửa đầu tiên mở ra hành trình tri thức.</p>
+  `,
+
+  "Tiết Sinh Hoạt Cuối Tuần": `
+    <p>Tiết sinh hoạt cuối tuần có đủ cảm xúc — vui, buồn, ồn ào và chân thật.</p>
+    <p>Đó là nơi chúng ta hiểu nhau hơn và cùng nhìn lại một tuần đã qua.</p>
+  `,
+
+  "Buổi Tổng Kết": `
+    <p>Buổi tổng kết là lúc vui có, buồn có — khép lại một năm học đầy trải nghiệm.</p>
+    <p>Đó là khoảnh khắc lắng lại trước khi bắt đầu một hành trình mới.</p>
+  `,
+
+  "Bảng Thành Tích": `
+    <p>Bảng thành tích lưu dấu sự cố gắng của cả lớp — những nỗ lực thầy cô đã giúp bồi đắp.</p>
+    <p>Nó là niềm tự hào chung của cả tập thể.</p>
+  `,
+
+  "Nụ Cười Của Thầy Cô": `
+    <p>Nụ cười của thầy cô luôn mang lại cảm giác an tâm và động lực.</p>
+    <p>Đó là phần thưởng lớn nhất dành cho nỗ lực của chúng ta.</p>
+  `,
+
+  "Tấm Thiệp 20/11": `
+    <p>Tấm thiệp 20/11 nhỏ bé nhưng chứa đựng biết bao lời cảm ơn chân thành.</p>
+    <p>Trong từng nét chữ vụng về là cả tấm lòng của một đứa trẻ.</p>
+  `,
+
+  "Những Lần Thầy Cô Đỡ Ta Dậy": `
+    <p>Có những lúc ta sai, thầy cô là người đỡ ta dậy nhẹ nhàng nhất.</p>
+    <p>Đó là sự bao dung mà ta luôn mang theo suốt đời.</p>
+  `,
+
+  "Khoảnh Khắc Ra Trường": `
+    <p>Khoảnh khắc ra trường là giây phút hạnh phúc xen lẫn nghẹn ngào.</p>
+    <p>Nó khép lại một hành trình đẹp, mở ra tương lai nhưng để lại biết bao lưu luyến.</p>
+  `
+};
+
+
 const animalImages = [
-  "https://thinhdaiphat.com/wp-content/uploads/2017/04/phan-viet-bang-mic-trang-10-vien.jpg", // Viên Phấn Trắng
+  "/img/fallbacks/smash-fake.png", // Viên Phấn Trắng
   "https://banghlt.com/wp-content/uploads/2024/07/viet-bang-dep-4.jpg", // Bảng Đen
   "https://vis.edu.vn/wp-content/uploads/2023/11/401206896_851148507015542_7566683992458363201_n.jpg", // Áo Dài 20/11
   "https://truongtotnhat.vn/wp-content/uploads/2025/07/mau-bia-so-diem-ca-nhan-cho-giao-vien.jpg", // Sổ Điểm
