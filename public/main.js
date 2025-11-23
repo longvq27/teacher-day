@@ -163,8 +163,12 @@ $(document).ready(function () {
   })
 
   $('.why-endangered').on('click', function (e) {
-    turnoffslideshow()
-    smashanimalprocess()
+    window.teacherPopupShown = true;
+    $('.meaning-of-memory').addClass('overlay');
+  })
+  $('.close-btn').on('click', function (e) {
+    window.teacherPopupShown = true;
+    $('.meaning-of-memory').removeClass('overlay');
   })
 
   $('.throbbing').on('mouseover', function (e) {
